@@ -1,6 +1,8 @@
 # unit-4-game
 Crystal Collector Game (UCB Project)
 
+#### Github pages link: https://boulderbrains.github.io/CrystalCollector/
+
 ### Assignment: CrystalsCollector Game
 
 #### ![Crystal Collector](assets/Images/1-CrystalCollector.jpg)
