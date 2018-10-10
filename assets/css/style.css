@@ -1,0 +1,22 @@
+
+.crystal-wrapper div {
+	height: 100px;
+	width: 100px;
+	background-size: cover;
+}
+
+.crystal-one {
+	background-image: url('../images/blueGem.png');
+}
+
+.crystal-two {
+	background-image: url('../images/greenGem.png');
+}
+
+.crystal-three {
+	background-image: url('../images/orangeGem.png');
+}
+
+.crystal-four {
+	background-image: url('../images/redGem.png');
+}
