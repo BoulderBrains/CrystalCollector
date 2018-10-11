@@ -5,6 +5,10 @@
 	background-size: cover;
 }
 
+.crystal-wrapper {
+	display: flex;
+}
+
 .crystal-one {
 	background-image: url('../images/blueGem.png');
 }
