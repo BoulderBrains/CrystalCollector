@@ -12,7 +12,7 @@
 	font-size: 50px;
 }
 
-.crystal-wrapper div {
+.crystal-wrapper button {
 	height: 100px;
 	width: 100px;
 	background-size: cover;
@@ -22,18 +22,18 @@
 	display: flex;
 }
 
-.crystal-one {
+#crystal-one {
 	background-image: url('../images/blueGem.png');
 }
 
-.crystal-two {
+#crystal-two {
 	background-image: url('../images/greenGem.png');
 }
 
-.crystal-three {
+#crystal-three {
 	background-image: url('../images/orangeGem.png');
 }
 
-.crystal-four {
+#crystal-four {
 	background-image: url('../images/redGem.png');
 }
