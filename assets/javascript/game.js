@@ -15,12 +15,12 @@ var userScore = 0;
 $(".score").append(userScore);
 
 // set up click handlers to increase userScore by the crystal point amount
-$(".crystal").click(function() {
+$(".crystal").click(function(userScore) {
 	//get the value off a crystal
 	var crystalValue = $(this).val();
 	console.log(crystalValue + " crystalValue");
 	var updatedScore = parseInt(crystalValue) + userScore;
-	console.log(updatedScore + " updatedScore");
+	console.log(parseInt(updatedScore) + " updatedScore");
 	// display the updatedScore variable on the page
 	$(".score").html(updatedScore);
 
