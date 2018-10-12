@@ -19,11 +19,11 @@
 <body>
 	<div class="title">Crystal Collector</div>
 	<div class="container">
-		<div class="target-number">Target number: </div>
+		<div id="target-number">Target number: </div>
 		<div class="score-board-wrapper">
-			<p id="wins">Wins: </p>
-			<p id="losses">Losses: </p>
-			<p id="score">Score: </p>
+			<p>Wins:<span id="wins"></span></p>
+			<p>Losses:<span id="losses"></span></p>
+			<p>Score:<span id="score"></span></p>
 		</div>
 
 		<div class="crystal-wrapper">
@@ -33,6 +33,8 @@
 			<button id="crystal-three" value="19" class="crystal"></button>
 			<button id="crystal-four" value="6" class="crystal"></button>
 		</div>
+
+		<button id="hard-reset"></button>
 
 	</div>
 

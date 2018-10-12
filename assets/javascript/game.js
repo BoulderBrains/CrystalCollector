@@ -1,59 +1,64 @@
 // Setting some empty variable to use later
 var wins = 0;
 var losses = 0;
-
-$("#wins").append(wins);
-$("#losses").append(losses);
-
-// set up a user score variable set to 0
 var userScore = 0;
 var targetNumber = 0;
 
-// set up click handlers to increase userScore by the crystal point amount
+// appending wins and losses to page for display for user
+$("#wins").append(wins);
+$("#losses").append(losses);
+
 $(".crystal").click(function() {
-	console.log(userScore);
 	//get the value off a crystal
 	var crystalValue = $(this).val();
-	console.log(crystalValue + " crystalValue");
+	
+	// resetting userScore to the previous userScore + the value of the crystal that was clicked
 	userScore = parseInt(crystalValue) + userScore;
-	console.log(parseInt(userScore) + " updatedScore");
+	
 	// display the userScore variable on the page
-	$(".score").html(userScore);
+	$("#score").text(userScore);
 
-	// if userScore === targetNumber { player wins, wins++, game restarts }
+	// if userScore === targetNumber { player wins, wins++, print increased wins to page, alert the suer, reset game }
 	if (userScore === targetNumber) {
 		wins++;
 		$("#wins").text(wins);
 		alert("you win");
 		reset();
 	}
-	// if userScore > targetNumber { player loses, losses++, game restarts }
+	// if userScore > targetNumber { player loses, losses++, print incresed losses to page, alert the user, reset game }
 	if (userScore > targetNumber) {
 		losses++;
 		$("#losses").text(losses);
 		alert("you lose");
 		reset();
 	}
-
 });
 
-// On restart() {
+function generateTargetNumber() {
+	// create targetNumber variable and set it to a random number
+	targetNumber = Math.floor((Math.random() * 120) + 1);
+
+	// display that targetVariable in the .target-number div
+	$("#target-number").text(targetNumber);
+}
+
 function reset() {
 	// find & set a new targetNumber
 	generateTargetNumber();
+
 	// set userScore back to 0
 	userScore = 0;
-	// display the user score variable on the page
-	$(".score").text(userScore);
+
+	// display the reset userScore variable to the page
+	$("#score").text(userScore);
 }
 
+// On click of the #hard-reset button, trigger that function
+$("#hard-reset").on("click", hardReset);
 
-function generateTargetNumber() {
-	// create targetNumber and set it to a random number
-	targetNumber = Math.floor((Math.random() * 99) + 1);
-
-	// display that targetVariable in the .target-number div
-	$(".target-number").text(targetNumber);
+function hardReset() {
+	// forces a page reload which will reset the user's wins & losses
+	location.reload();
 }
 
 // This starts the game
