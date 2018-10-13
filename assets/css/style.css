@@ -33,8 +33,10 @@ body {
 }
 
 .crystal-wrapper button {
-	height: 60px;
-	width: 60px;
+	/* height: 60px;
+	width: 60px; */
+	height: 100px;
+	width: 100px;
 	background-size: cover;
 	margin: 10px;
 	background-color: transparent;
