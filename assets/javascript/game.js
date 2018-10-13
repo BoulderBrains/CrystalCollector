@@ -22,29 +22,44 @@ $(".crystal").click(function() {
 	if (userScore === targetNumber) {
 		wins++;
 		$("#wins").text(wins);
-		alert("you win");
+		$("#winModal").modal('show');
+		// alert("you win");
 		reset();
 	}
 	// if userScore > targetNumber { player loses, losses++, print incresed losses to page, alert the user, reset game }
 	if (userScore > targetNumber) {
 		losses++;
 		$("#losses").text(losses);
-		alert("you lose");
+		$("#loseModal").modal('show');
+		// alert("you lose");
 		reset();
 	}
 });
 
 function generateTargetNumber() {
-	// create targetNumber variable and set it to a random number
-	targetNumber = Math.floor((Math.random() * 120) + 1);
+	// create targetNumber variable and set it to a random number 19 - 120
+	targetNumber = Math.floor((Math.random() * 120) + 19);
 
 	// display that targetVariable in the .target-number div
 	$("#target-number").text(targetNumber);
 }
 
+function generateCrystalValues() {
+	// push the crystalyValue number to the value of the crystal
+	$(".crystal").each(function() {
+		// create crystalValue variable and set it to a random number between 1-12
+		crystalValue = Math.floor((Math.random() * 12) + 1);
+		// set the value to THIS crystal value, as it iterates through all .crystal elements
+		$(this).val(crystalValue);
+	});
+}
+
 function reset() {
 	// find & set a new targetNumber
 	generateTargetNumber();
+
+	// find & set the crystalValues
+	generateCrystalValues();
 
 	// set userScore back to 0
 	userScore = 0;
@@ -53,13 +68,13 @@ function reset() {
 	$("#score").text(userScore);
 }
 
-// On click of the #hard-reset button, trigger that function
-$("#hard-reset").on("click", hardReset);
-
 function hardReset() {
 	// forces a page reload which will reset the user's wins & losses
 	location.reload();
 }
+
+// On click of the #hard-reset button, trigger that function
+$("#hard-reset").on("click", hardReset);
 
 // This starts the game
 reset();
