@@ -6,19 +6,25 @@ body {
 	font-family: 'Archivo Narrow', sans-serif;
 }
 
+.jumbotron {
+	padding-top: 0;
+	padding-bottom: 0;
+	margin-top: 15px;
+}
+
 .crystal-icon {
 	height: 100px;
 	width: 100px;
 }
 
-.target-number {
-	font-size: 40px;
+.display-number {
+	font-size: 60px;
 }
 
 .score-board-wrapper {
-	border: 1px solid black;
 	border-radius: 5px;
 	width: 25%;
+	float: right;
 }
 
 .title {
@@ -27,12 +33,17 @@ body {
 }
 
 .crystal-wrapper button {
-	height: 100px;
-	width: 100px;
+	height: 60px;
+	width: 60px;
 	background-size: cover;
 	margin: 10px;
 	background-color: transparent;
 	transition: transform .2s;
+
+	/* @media (min-width: 768px) {
+		height: 100px;
+		width: 100px;
+	} */
 }
 
 .crystal-wrapper button:hover {

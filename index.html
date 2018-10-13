@@ -73,21 +73,38 @@
 		</div>
 	</div>
 
-	<div class="title text-center">Crystal Count <img class="crystal-icon" src="assets/images/Crystal.png"></div>
 	<div class="container">
-		<div class="col-sm-12">
+		<div class="jumbotron">
+			<div class="container">
+					<div class="title text-center">Crystal Count <img class="crystal-icon" src="assets/images/crystal-icon.png"></div>
+				<div class="row text-center">
+					<div class="col-sm-6">
+						<h1 class="display-7">Target number: </h1>
+						<p id="target-number" class="display-number"></p>
+					</div>
+					<div class="col-sm-6">
+						<h1 class="display-7">Your score: </h1>
+						<p id="score" class="display-number"></p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- <div class="col-sm-12">
 			<div class="target-number-label">Target number: 
 				<span id="target-number"></span>
 			</div>
-			<div class="target-number-label">Your score:
+			<div class="target-number-label">Your score: 
 				<span id="score"></span>
 			</div>
+		</div> -->
 
-		</div>
-		
-		<div class="score-board-wrapper">
-			<p>Wins:<span id="wins"></span></p>
-			<p>Losses:<span id="losses"></span></p>
+		<div class="card score-board-wrapper">
+			<h5 class="card-header">Score:</h5>
+			<div class="card-body">
+				<p class="card-text">Wins: <span id="wins"></span></p>
+				<p class="card-text">Losses: <span id="losses"></span></p>
+			</div>
 		</div>
 
 		<div class="crystal-wrapper">
@@ -98,7 +115,7 @@
 			<button id="crystal-four" value="" class="btn crystal"></button>
 		</div>
 
-		<button id="hard-reset" class="btn btn-danger">Hard reset</button>
+		<button id="hard-reset" class="btn btn-secondary">Hard reset</button>
 	</div>
 
 	<!-- My JS file include -->
