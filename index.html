@@ -70,24 +70,32 @@
 		</div>
 	</div>
 
-	<div class="title">Crystal Count</div>
+	<div class="title text-center">Crystal Count</div>
 	<div class="container">
-		<div id="target-number">Target number: </div>
+		<div class="col-sm-12">
+			<div class="target-number-label">Target number: 
+				<span id="target-number"></span>
+			</div>
+			<div class="target-number-label">Your score:
+				<span id="score"></span>
+			</div>
+
+		</div>
+		
 		<div class="score-board-wrapper">
 			<p>Wins:<span id="wins"></span></p>
 			<p>Losses:<span id="losses"></span></p>
-			<p>Score:<span id="score"></span></p>
 		</div>
 
 		<div class="crystal-wrapper">
 			<p class="last-crystal-value"></p>
-			<button id="crystal-one" value="" class="crystal"></button>
-			<button id="crystal-two" value="" class="crystal"></button>
-			<button id="crystal-three" value="" class="crystal"></button>
-			<button id="crystal-four" value="" class="crystal"></button>
+			<button id="crystal-one" value="" class="btn crystal"></button>
+			<button id="crystal-two" value="" class="btn crystal"></button>
+			<button id="crystal-three" value="" class="btn crystal"></button>
+			<button id="crystal-four" value="" class="btn crystal"></button>
 		</div>
 
-		<button id="hard-reset">Hard reset</button>
+		<button id="hard-reset" class="btn btn-danger">Hard reset</button>
 	</div>
 
 	<!-- My JS file include -->
