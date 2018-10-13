@@ -1,3 +1,16 @@
+body {
+	background-color: #FF97E7;
+}
+
+.container {
+	font-family: 'Archivo Narrow', sans-serif;
+}
+
+.crystal-icon {
+	height: 100px;
+	width: 100px;
+}
+
 .target-number {
 	font-size: 40px;
 }
@@ -10,12 +23,20 @@
 
 .title {
 	font-size: 50px;
+	font-family: 'Kodchasan', sans-serif;
 }
 
 .crystal-wrapper button {
 	height: 100px;
 	width: 100px;
 	background-size: cover;
+	margin: 10px;
+	background-color: transparent;
+	transition: transform .2s;
+}
+
+.crystal-wrapper button:hover {
+	transform: scale(1.15);
 }
 
 .crystal-wrapper {
