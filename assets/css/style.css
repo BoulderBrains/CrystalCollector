@@ -17,6 +17,11 @@ body {
 	width: 100px;
 }
 
+.fa-trophy,
+.fa-book-dead {
+	font-size: 100px;
+}
+
 .display-number {
 	font-size: 60px;
 }
