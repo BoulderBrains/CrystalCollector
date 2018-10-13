@@ -20,10 +20,16 @@ $(".crystal").click(function() {
 
 	// if userScore === targetNumber { player wins, wins++, print increased wins to page, alert the suer, reset game }
 	if (userScore === targetNumber) {
+		// increase # of wins by 1
 		wins++;
+		
+		// update the newly increased wins vairble it in html
 		$("#wins").text(wins);
+		
+		// trigger the bootstrap wins modal
 		$("#winModal").modal('show');
-		// alert("you win");
+
+		// reset the game
 		reset();
 	}
 	// if userScore > targetNumber { player loses, losses++, print incresed losses to page, alert the user, reset game }
@@ -31,7 +37,6 @@ $(".crystal").click(function() {
 		losses++;
 		$("#losses").text(losses);
 		$("#loseModal").modal('show');
-		// alert("you lose");
 		reset();
 	}
 });
@@ -49,6 +54,7 @@ function generateCrystalValues() {
 	$(".crystal").each(function() {
 		// create crystalValue variable and set it to a random number between 1-12
 		crystalValue = Math.floor((Math.random() * 12) + 1);
+
 		// set the value to THIS crystal value, as it iterates through all .crystal elements
 		$(this).val(crystalValue);
 	});
