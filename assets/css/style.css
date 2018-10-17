@@ -22,6 +22,10 @@ body {
 	font-size: 100px;
 }
 
+.modal-body {
+	text-align: center;
+}
+
 .display-number {
 	font-size: 60px;
 }
